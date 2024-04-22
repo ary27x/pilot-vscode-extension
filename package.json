@@ -1,0 +1,25 @@
+{
+  "name": "pilot-language-extension",
+  "displayName": "pilot-language-extension",
+  "description": "Syntax highlighter extension for pilot programming language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "pilot",
+      "aliases": ["Pilot", "pilot"],
+      "extensions": [".pi"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "pilot",
+      "scopeName": "source.pilot",
+      "path": "./syntaxes/pilot.tmLanguage.json"
+    }]
+  }
+}

@@ -1,0 +1,98 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Pilot",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#keyword"
+		},
+     	{
+			"include": "#strings"
+		},
+		{
+			"include": "#functional_keywords"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#declaration_keywords"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#hindi_numbers"
+		}
+		
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.pilot",
+				"match": "\\b(if|else|till|range|to|as|get|अगर|नहीं|तोह|जब|तक|क्रम|से|जैसे|डाले)\\b"
+			}]
+		},
+		"keyword": {
+			"patterns": [{
+				"name": "keyword.pilot",
+				"match": "\\b(display|sleep|clear|exit|डिस्प्ले|रुके|साफ़|समाप्त)\\b"
+			}]
+		},
+		"functional_keywords": {
+			"patterns": [{
+				"name": "support.function",
+				"match": "\\b(function|call|return|कार्य|कॉल|लौटाए)\\b"
+			}]
+		},
+	
+		"declaration_keywords": {
+			"patterns": [{
+				"name": "keyword.other",
+				"match": "\\b(is|are|है)\\b"
+			}]
+		},
+
+		"strings": {
+			"name": "string.quoted.double.pilot",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.pilot",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "comment",
+			"begin": "~",
+			"end": "\n",
+			"patterns": [
+				{
+					"name": "comment",
+					"match": "\\\\."
+					
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [{
+				"name": "support.function",
+				"match": "\\b([0-9]+)\\b"
+			}]
+		},
+		"hindi_numbers": {
+			"patterns": [{
+				"name": "support.function",
+				"match": "\\b([१-९०]+)\\b"
+			}]
+		}
+		
+
+		
+	},
+	"scopeName": "source.pilot"
+}
